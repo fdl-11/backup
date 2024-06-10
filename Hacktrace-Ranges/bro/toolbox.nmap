@@ -1,0 +1,23 @@
+# Nmap 7.94SVN scan initiated Mon May 13 10:08:12 2024 as: nmap -sCV -p- -oN toolbox.nmap --min-rate=1000 10.1.2.137
+Nmap scan report for 10.1.2.137
+Host is up (0.27s latency).
+Not shown: 65533 closed tcp ports (conn-refused)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 d0:15:a1:d0:a2:f6:fb:f4:e6:27:e3:a6:1a:ba:bd:00 (ECDSA)
+|_  256 15:2f:83:07:76:fd:68:2f:f0:75:15:c4:23:c5:bb:60 (ED25519)
+80/tcp open  http    Apache httpd 2.4.52 ((Ubuntu))
+|_http-title: Site doesn't have a title.
+|_http-server-header: Apache/2.4.52 (Ubuntu)
+| http-git: 
+|   10.1.2.137:80/.git/
+|     Git repository found!
+|     .gitignore matched patterns 'user' 'uid'
+|     Repository description: Unnamed repository; edit this file 'description' to name the...
+|     Remotes:
+|_      https://github.com/akmatcalc/non.git
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon May 13 10:10:04 2024 -- 1 IP address (1 host up) scanned in 112.33 seconds

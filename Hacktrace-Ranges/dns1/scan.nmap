@@ -1,0 +1,30 @@
+# Nmap 7.94SVN scan initiated Sat May 18 09:45:07 2024 as: nmap -sCV -p- -oN scan.nmap --min-rate=1000 10.1.2.10
+Warning: 10.1.2.10 giving up on port because retransmission cap hit (10).
+Nmap scan report for 10.1.2.10
+Host is up (0.28s latency).
+Not shown: 65524 closed tcp ports (conn-refused)
+PORT      STATE    SERVICE       VERSION
+22/tcp    open     ssh           OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 41:48:e8:68:d4:2b:4f:ad:2f:08:e7:61:d0:39:66:ca (DSA)
+|   2048 64:d3:ae:38:91:8d:a8:d5:fb:f7:63:67:f7:51:db:45 (RSA)
+|   256 95:d9:14:be:e9:06:52:14:4d:8d:0d:11:e2:33:d9:3e (ECDSA)
+|_  256 92:aa:a2:d9:3d:5d:1d:03:2a:3a:45:c6:d5:e9:0e:19 (ED25519)
+53/tcp    open     domain        ISC BIND 9.9.5-3ubuntu0.16 (Ubuntu Linux)
+| dns-nsid: 
+|_  bind.version: 9.9.5-3ubuntu0.16-Ubuntu
+80/tcp    open     http          Apache httpd 2.4.7 ((Ubuntu))
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+|_http-title: FileRun :: Login
+4136/tcp  filtered cl-db-request
+7808/tcp  filtered unknown
+29743/tcp filtered unknown
+34905/tcp filtered unknown
+38585/tcp filtered unknown
+49726/tcp filtered unknown
+65038/tcp filtered unknown
+65072/tcp filtered unknown
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat May 18 09:47:18 2024 -- 1 IP address (1 host up) scanned in 131.18 seconds

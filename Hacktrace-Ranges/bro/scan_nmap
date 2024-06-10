@@ -1,0 +1,88 @@
+# Nmap 7.94SVN scan initiated Mon May 13 09:41:50 2024 as: nmap -sC -sV -oN scan_nmap 10.1.2.141
+Nmap scan report for 10.1.2.141
+Host is up (0.32s latency).
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 ea:0a:a6:43:05:78:61:20:38:0f:65:bf:50:bb:71:42 (RSA)
+|   256 5c:00:14:53:ab:1c:38:a5:9b:e5:6e:18:2b:b7:8e:9d (ECDSA)
+|_  256 22:d3:c8:10:62:af:1d:ba:fa:f5:aa:0f:d7:68:c8:26 (ED25519)
+80/tcp   open  http    Apache httpd 2.4.54 ((Debian))
+|_http-title: Apache2 Debian Default Page: It works
+|_http-server-header: Apache/2.4.54 (Debian)
+5000/tcp open  upnp?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Server: Werkzeug/2.2.3 Python/3.11.2
+|     Date: Mon, 13 May 2024 02:40:11 GMT
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 1627
+|     Connection: close
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <title>
+|     </title>
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+|     <!-- Bootstrap -->
+|     <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+|     <link rel="stylesheet" href="/static/starter-template.css">
+|     </head>
+|     <body>
+|     <nav class="navbar navbar-inverse navbar-fixed-top">
+|     <div class="container">
+|     <div class="navbar-header">
+|     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+|     <span class="sr-only">Toggle navigation</span>
+|     <span class="
+|   RTSPRequest: 
+|     <!DOCTYPE HTML>
+|     <html lang="en">
+|     <head>
+|     <meta charset="utf-8">
+|     <title>Error response</title>
+|     </head>
+|     <body>
+|     <h1>Error response</h1>
+|     <p>Error code: 400</p>
+|     <p>Message: Bad request version ('RTSP/1.0').</p>
+|     <p>Error code explanation: 400 - Bad request syntax or unsupported method.</p>
+|     </body>
+|_    </html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port5000-TCP:V=7.94SVN%I=7%D=5/13%Time=66417F1D%P=x86_64-pc-linux-gnu%r
+SF:(GetRequest,70A,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20Werkzeug/2\.2\.3\
+SF:x20Python/3\.11\.2\r\nDate:\x20Mon,\x2013\x20May\x202024\x2002:40:11\x2
+SF:0GMT\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:
+SF:\x201627\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20html>\n<html>\n\x2
+SF:0\x20<head>\n\x20\x20\x20\x20<title>\nMy\x20Web\n</title>\n\x20\x20\x20
+SF:\x20<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x20init
+SF:ial-scale=1\.0\">\n\n\x20\x20\x20\x20<!--\x20Bootstrap\x20-->\n\x20\x20
+SF:\x20\x20<link\x20href=\"//cdnjs\.cloudflare\.com/ajax/libs/twitter-boot
+SF:strap/3\.3\.7/css/bootstrap\.min\.css\"\x20rel=\"stylesheet\">\n<link\x
+SF:20rel=\"stylesheet\"\x20href=\"/static/starter-template\.css\">\n\n\x20
+SF:\x20</head>\n\x20\x20<body>\n\x20\x20\x20\x20\n\x20\x20\x20\x20\n\x20\x
+SF:20\x20\x20<nav\x20class=\"navbar\x20navbar-inverse\x20navbar-fixed-top\
+SF:">\n\x20\x20\x20\x20\x20\x20<div\x20class=\"container\">\n\x20\x20\x20\
+SF:x20\x20\x20\x20\x20<div\x20class=\"navbar-header\">\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20<button\x20type=\"button\"\x20class=\"navbar-togg
+SF:le\x20collapsed\"\x20data-toggle=\"collapse\"\x20data-target=\"#navbar\
+SF:"\x20aria-expanded=\"false\"\x20aria-controls=\"navbar\">\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\"sr-only\">Toggle\x
+SF:20navigation</span>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<s
+SF:pan\x20class=\"")%r(RTSPRequest,16C,"<!DOCTYPE\x20HTML>\n<html\x20lang=
+SF:\"en\">\n\x20\x20\x20\x20<head>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\
+SF:x20charset=\"utf-8\">\n\x20\x20\x20\x20\x20\x20\x20\x20<title>Error\x20
+SF:response</title>\n\x20\x20\x20\x20</head>\n\x20\x20\x20\x20<body>\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20<h1>Error\x20response</h1>\n\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20<p>Error\x20code:\x20400</p>\n\x20\x20\x20\x20\x20\x20
+SF:\x20\x20<p>Message:\x20Bad\x20request\x20version\x20\('RTSP/1\.0'\)\.</
+SF:p>\n\x20\x20\x20\x20\x20\x20\x20\x20<p>Error\x20code\x20explanation:\x2
+SF:0400\x20-\x20Bad\x20request\x20syntax\x20or\x20unsupported\x20method\.<
+SF:/p>\n\x20\x20\x20\x20</body>\n</html>\n");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon May 13 09:48:51 2024 -- 1 IP address (1 host up) scanned in 421.55 seconds

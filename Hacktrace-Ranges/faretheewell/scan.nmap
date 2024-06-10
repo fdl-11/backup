@@ -1,0 +1,19 @@
+# Nmap 7.94SVN scan initiated Tue May 14 16:28:51 2024 as: nmap -sCV -p- -oN scan.nmap --min-rate=1000 10.1.2.145
+Warning: 10.1.2.145 giving up on port because retransmission cap hit (10).
+Nmap scan report for 10.1.2.145
+Host is up (0.32s latency).
+Not shown: 60115 closed tcp ports (conn-refused), 5418 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 d6:06:eb:45:98:f7:f9:c9:1b:15:b7:9f:95:24:41:f2 (RSA)
+|   256 87:56:ee:f9:84:5a:08:10:eb:6c:fa:1a:93:fc:40:56 (ECDSA)
+|_  256 b3:92:37:26:3a:cd:89:9d:88:5d:85:81:b2:8c:97:ce (ED25519)
+80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+| http-title: Login
+|_Requested resource was /login.php
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May 14 16:31:37 2024 -- 1 IP address (1 host up) scanned in 165.14 seconds

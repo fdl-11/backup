@@ -1,0 +1,35 @@
+# Nmap 7.94SVN scan initiated Tue May 14 08:39:06 2024 as: nmap -sCV -p- -oN scan.nmap --min-rate=1000 10.1.2.157
+Warning: 10.1.2.157 giving up on port because retransmission cap hit (10).
+Nmap scan report for 10.1.2.157
+Host is up (0.30s latency).
+Not shown: 65481 closed tcp ports (conn-refused), 52 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 3.0.3
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:10.18.201.241
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 1
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_-rw-r--r--    1 1000     1000      1998572 Apr 19 03:51 sienna_eborchure.pdf
+80/tcp open  http    Apache httpd 2.4.59 ((Debian))
+| http-title: Vien'le - Vien'le
+|_Requested resource was http://10.1.2.157/?file=vien-le
+|_http-generator: pluck 4.7.13
+|_http-server-header: Apache/2.4.59 (Debian)
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+Service Info: OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May 14 08:41:12 2024 -- 1 IP address (1 host up) scanned in 125.93 seconds
