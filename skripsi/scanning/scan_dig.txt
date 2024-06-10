@@ -1,0 +1,21 @@
+
+; <<>> DiG 9.19.21-1-Debian <<>> elearning.smansa.link
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 25297
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: c5474e9eaf76645b0100000066416e6a66a1f1d95545c06f (good)
+;; QUESTION SECTION:
+;elearning.smansa.link.		IN	A
+
+;; ANSWER SECTION:
+elearning.smansa.link.	14203	IN	A	198.252.98.81
+
+;; Query time: 4 msec
+;; SERVER: 103.19.180.211#53(103.19.180.211) (UDP)
+;; WHEN: Mon May 13 08:35:36 WIB 2024
+;; MSG SIZE  rcvd: 94
+

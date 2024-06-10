@@ -1,0 +1,128 @@
+# Nmap 7.94SVN scan initiated Mon May 13 09:06:36 2024 as: nmap -sC -sV -oN scan_nmap 198.252.98.81
+Nmap scan report for 198.252.98.81-static.reverse.arandomserver.com (198.252.98.81)
+Host is up (0.27s latency).
+Not shown: 987 filtered tcp ports (no-response)
+PORT    STATE SERVICE    VERSION
+21/tcp  open  ftp        Pure-FTPd
+22/tcp  open  ssh        OpenSSH 7.4 (protocol 2.0)
+25/tcp  open  smtp?
+|_smtp-commands: Couldn't establish connection on port 25
+26/tcp  open  smtp       Exim smtpd 4.96.2
+|_smtp-ntlm-info: ERROR: Script execution failed (use -d to debug)
+|_smtp-commands: Couldn't establish connection on port 26
+53/tcp  open  domain     PowerDNS Authoritative Server 4.7.3
+| dns-nsid: 
+|   NSID: lax024.hawkhost.com (6c61783032342e6861776b686f73742e636f6d)
+|_  id.server: lax024.hawkhost.com
+80/tcp  open  tcpwrapped
+|_http-server-header: imunify360-webshield/1.21
+|_http-title: One moment, please...
+110/tcp open  pop3?
+143/tcp open  imap?
+443/tcp open  ssl/https  LiteSpeed
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|   h2
+|   http/1.1
+|   http/1.0
+|_  http/0.9
+| http-server-header: 
+|   LiteSpeed
+|_  imunify360-webshield/1.21
+|_http-title: 403 Forbidden
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Connection: close
+|     content-type: text/html
+|     date: Mon, 13 May 2024 02:07:08 GMT
+|     server: LiteSpeed
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+|     <meta http-equiv="Cache-control" content="no-cache">
+|     <meta http-equiv="Pragma" content="no-cache">
+|     <meta http-equiv="Expires" content="0">
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+|     <title>404 Not Found</title>
+|     <style type="text/css">
+|     body {
+|     font-family: Arial, Helvetica, sans-serif;
+|     font-size: 14px;
+|     line-height: 1.428571429;
+|     background-color: #ffffff;
+|     color: #2F3230;
+|     padding: 0;
+|     margin: 0;
+|     section, footer {
+|     display: block;
+|     padding: 0;
+|     margin: 0;
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     content-type: text/html
+|     last-modified: Wed, 17 Jun 2020 20:01:33 GMT
+|     accept-ranges: bytes
+|     content-length: 163
+|     date: Mon, 13 May 2024 02:07:05 GMT
+|     server: LiteSpeed
+|     <html><head><META HTTP-EQUIV="Cache-control" CONTENT="no-cache"><META HTTP-EQUIV="refresh" CONTENT="0;URL=/cgi-sys/defaultwebpage.cgi"></head><body></body></html>
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     allow: OPTIONS,HEAD,GET,POST
+|     content-length: 0
+|     date: Mon, 13 May 2024 02:07:07 GMT
+|_    server: LiteSpeed
+| ssl-cert: Subject: commonName=lax024.hawkhost.com
+| Subject Alternative Name: DNS:lax024.hawkhost.com
+| Not valid before: 2024-04-11T00:00:00
+|_Not valid after:  2024-07-10T23:59:59
+465/tcp open  ssl/smtp   Exim smtpd 4.96.2
+|_smtp-commands: lax024.hawkhost.com Hello 198.252.98.81-static.reverse.arandomserver.com [103.19.180.1], SIZE 52428800, 8BITMIME, PIPELINING, PIPECONNECT, AUTH PLAIN LOGIN, HELP
+587/tcp open  smtp       Exim smtpd 4.96.2
+|_smtp-commands: Couldn't establish connection on port 587
+993/tcp open  ssl/imap   Dovecot imapd
+995/tcp open  ssl/pop3   Dovecot pop3d
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.94SVN%T=SSL%I=7%D=5/13%Time=664175C8%P=x86_64-pc-linux-
+SF:gnu%r(GetRequest,173,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\
+SF:ncontent-type:\x20text/html\r\nlast-modified:\x20Wed,\x2017\x20Jun\x202
+SF:020\x2020:01:33\x20GMT\r\naccept-ranges:\x20bytes\r\ncontent-length:\x2
+SF:0163\r\ndate:\x20Mon,\x2013\x20May\x202024\x2002:07:05\x20GMT\r\nserver
+SF::\x20LiteSpeed\r\n\r\n<html><head><META\x20HTTP-EQUIV=\"Cache-control\"
+SF:\x20CONTENT=\"no-cache\"><META\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"0
+SF:;URL=/cgi-sys/defaultwebpage\.cgi\"></head><body></body></html>\n")%r(H
+SF:TTPOptions,8F,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\nallow:
+SF:\x20OPTIONS,HEAD,GET,POST\r\ncontent-length:\x200\r\ndate:\x20Mon,\x201
+SF:3\x20May\x202024\x2002:07:07\x20GMT\r\nserver:\x20LiteSpeed\r\n\r\n")%r
+SF:(FourOhFourRequest,27BC,"HTTP/1\.0\x20404\x20Not\x20Found\r\nConnection
+SF::\x20close\r\ncontent-type:\x20text/html\r\ndate:\x20Mon,\x2013\x20May\
+SF:x202024\x2002:07:08\x20GMT\r\nserver:\x20LiteSpeed\r\n\r\n\n\n\n<!DOCTY
+SF:PE\x20html>\n<html>\n\x20\x20\x20\x20<head>\n\x20\x20\x20\x20<meta\x20h
+SF:ttp-equiv=\"Content-type\"\x20content=\"text/html;\x20charset=utf-8\">\
+SF:n\x20\x20\x20\x20<meta\x20http-equiv=\"Cache-control\"\x20content=\"no-
+SF:cache\">\n\x20\x20\x20\x20<meta\x20http-equiv=\"Pragma\"\x20content=\"n
+SF:o-cache\">\n\x20\x20\x20\x20<meta\x20http-equiv=\"Expires\"\x20content=
+SF:\"0\">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=d
+SF:evice-width,\x20initial-scale=1\.0\">\n\x20\x20\x20\x20<title>404\x20No
+SF:t\x20Found</title>\n\x20\x20\x20\x20<style\x20type=\"text/css\">\n\x20\
+SF:x20\x20\x20\x20\x20\x20\x20body\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20font-family:\x20Arial,\x20Helvetica,\x20sans-serif;\n\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2014px;\n\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20line-height:\x201\.428571429
+SF:;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x2
+SF:0#ffffff;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#2
+SF:F3230;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x200;\
+SF:n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\n\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20}\n\x20\x20\x20\x20\x20\x20\x20\x20section,\x2
+SF:0footer\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\
+SF:x20block;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x20
+SF:0;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20}\n\x20\x20\x20\x20\x20\x20");
+Service Info: Host: lax024.hawkhost.com
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon May 13 09:24:55 2024 -- 1 IP address (1 host up) scanned in 1098.61 seconds

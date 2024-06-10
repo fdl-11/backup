@@ -1,0 +1,10 @@
+PING elearning.smansa.link (198.252.98.81) 56(84) bytes of data.
+64 bytes from 198.252.98.81-static.reverse.arandomserver.com (198.252.98.81): icmp_seq=1 ttl=50 time=271 ms
+64 bytes from 198.252.98.81-static.reverse.arandomserver.com (198.252.98.81): icmp_seq=2 ttl=50 time=196 ms
+64 bytes from 198.252.98.81-static.reverse.arandomserver.com (198.252.98.81): icmp_seq=3 ttl=50 time=196 ms
+64 bytes from 198.252.98.81-static.reverse.arandomserver.com (198.252.98.81): icmp_seq=4 ttl=50 time=190 ms
+64 bytes from 198.252.98.81-static.reverse.arandomserver.com (198.252.98.81): icmp_seq=5 ttl=50 time=192 ms
+
+--- elearning.smansa.link ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4012ms
+rtt min/avg/max/mdev = 190.110/208.992/270.640/30.903 ms

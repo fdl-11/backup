@@ -1,0 +1,2 @@
+# Nmap 7.94SVN scan initiated Tue May 28 17:02:00 2024 as: nmap -sCV -p- -oN nmap.scan --min-rate=1000 192.252.98.81
+# Nmap done at Tue May 28 17:02:03 2024 -- 1 IP address (0 hosts up) scanned in 2.55 seconds
